@@ -7,6 +7,7 @@ function addClient() {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const packagePlan = document.getElementById("package").value;
+    const dueDate = document.getElementById("dueDate").value;
 
     if (name === "" || phone === "") {
         alert("Please fill all fields");
