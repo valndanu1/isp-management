@@ -14,14 +14,21 @@ function addClient() {
         return;
     }
 
-    const client = {
-        id: Date.now(),
-        name: name,
-        phone: phone,
-        packagePlan: packagePlan,
-        status: "Active"
-    };
+ const today = new Date();
+const expiry = new Date(dueDate);
 
+const status = expiry >= today
+    ? "Active"
+    : "Inactive";
+
+const client = {
+    id: Date.now(),
+    name: name,
+    phone: phone,
+    packagePlan: packagePlan,
+    dueDate: dueDate,
+    status: status
+};
     clients.push(client);
 
     localStorage.setItem("clients", JSON.stringify(clients));
