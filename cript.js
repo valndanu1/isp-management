@@ -52,6 +52,7 @@ function displayClients() {
             <td>${client.name}</td>
             <td>${client.phone}</td>
             <td>${client.packagePlan}</td>
+            <td>${client.dueDate}</td>
             <td>${client.status}</td>
         </tr>
         `;
