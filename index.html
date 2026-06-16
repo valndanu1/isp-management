@@ -98,4 +98,104 @@
 <script src="script.js"></script>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISP Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>NetLink ISP</h2>
+
+        <ul>
+            <li>📊 Dashboard</li>
+            <li>👥 Clients</li>
+            <li>📦 Packages</li>
+            <li>💳 Payments</li>
+            <li>📈 Reports</li>
+            <li>⚙ Settings</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+
+        <h1>ISP Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Clients</h3>
+                <p id="totalClients">0</p>
+            </div>
+
+            <div class="card active">
+                <h3>Active Clients</h3>
+                <p id="activeClients">0</p>
+            </div>
+
+            <div class="card inactive">
+                <h3>Inactive Clients</h3>
+                <p id="inactiveClients">0</p>
+            </div>
+
+            <div class="card revenue">
+                <h3>Monthly Revenue</h3>
+                <p>KSh 0</p>
+            </div>
+
+        </div>
+
+        <section class="form-section">
+
+            <h2>Add Client</h2>
+
+            <input type="text" id="name" placeholder="Client Name">
+
+            <input type="text" id="phone" placeholder="Phone Number">
+
+            <select id="package">
+                <option value="10 Mbps - KSh 2000">10 Mbps - KSh 2000</option>
+                <option value="20 Mbps - KSh 3000">20 Mbps - KSh 3000</option>
+                <option value="50 Mbps - KSh 5000">50 Mbps - KSh 5000</option>
+            </select>
+
+            <button onclick="addClient()">Add Client</button>
+
+        </section>
+
+        <section class="table-section">
+
+            <h2>Clients</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Package</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="clientTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
